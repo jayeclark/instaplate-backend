@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dietary-options",
+      "handler": "dietary-options.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dietary-options/count",
+      "handler": "dietary-options.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dietary-options/:id",
+      "handler": "dietary-options.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dietary-options",
+      "handler": "dietary-options.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dietary-options/:id",
+      "handler": "dietary-options.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dietary-options/:id",
+      "handler": "dietary-options.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

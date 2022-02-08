@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dietary_options",
+  "info": {
+    "name": "dietary_options",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "local_id": {
+      "type": "biginteger",
+      "unique": true,
+      "private": false
+    }
+  }
+}

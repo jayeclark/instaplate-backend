@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "charge_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_line_2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "dishes": {
+      "type": "json"
+    },
+    "token": {
+      "type": "string"
+    },
+    "restaurant": {
+      "model": "restaurants"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "second_id": {
+      "type": "uid"
+    }
+  }
+}
