@@ -1,5 +1,4 @@
 const vars = process.env;
-console.log(vars);
 
 module.exports = ({ env }) => ({
   defaultConnection: 'default',

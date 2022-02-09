@@ -17,9 +17,9 @@ module.exports = {
 
    find: async ctx => {
     if (ctx.query._q) {
-      return strapi.services.order.search(ctx.query);
+      return strapi.services.orders.search(ctx.query);
     } else {
-      return strapi.services.order.fetchAll(ctx.query);
+      return strapi.services.orders.fetchAll(ctx.query);
     }
   },
 
@@ -34,7 +34,7 @@ module.exports = {
       return ctx.notFound();
     }
 
-    return strapi.services.order.fetch(ctx.params);
+    return strapi.services.orders.fetch(ctx.params);
   },
 
   /**
@@ -44,7 +44,7 @@ module.exports = {
    */
 
   count: async ctx => {
-    return strapi.services.order.count(ctx.query);
+    return strapi.services.orders.count(ctx.query);
   },
 
   /**
@@ -94,7 +94,7 @@ module.exports = {
    */
 
   update: async (ctx, next) => {
-    return strapi.services.order.edit(ctx.params, ctx.request.body);
+    return strapi.services.orders.edit(ctx.params, ctx.request.body);
   },
 
   /**
@@ -104,6 +104,6 @@ module.exports = {
    */
 
   destroy: async (ctx, next) => {
-    return strapi.services.order.remove(ctx.params);
+    return strapi.services.orders.remove(ctx.params);
   }
 };

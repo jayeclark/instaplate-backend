@@ -45,9 +45,6 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "second_id": {
-      "type": "uid"
     }
   }
 }
