@@ -54,12 +54,10 @@ module.exports = {
    */
 
   create: async ctx => {
-    console.log("order create called");
-    console.log(ctx.request.body);
+
     const { address, address_line_2, amount, dishes, token, city, state, zip, restaurant_id } = JSON.parse(ctx.request.body);
 
     const stripeAmount = Math.floor(amount * 100);
-    console.log(token);
 
     const charge = await stripe.charges.create({
       // Transform cents to dollars.
@@ -69,7 +67,6 @@ module.exports = {
       source: token
     });
 
-    console.log(strapi.services.orders.add);
     // Register the order in the database
     const order = await strapi.services.orders.add({
       user: ctx.state.user._id,
