@@ -19,7 +19,7 @@ module.exports = {
     if (ctx.query._q) {
       return strapi.services.orders.search(ctx.query);
     } else {
-      return strapi.services.orders.fetchAll(ctx.query);
+      return strapi.services.orders.find(ctx.query);
     }
   },
 
@@ -34,7 +34,7 @@ module.exports = {
       return ctx.notFound();
     }
 
-    return strapi.services.orders.fetch(ctx.params);
+    return strapi.services.orders.find(ctx.params);
   },
 
   /**
