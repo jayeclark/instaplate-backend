@@ -45,6 +45,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "synctoken": {
+      "type": "biginteger",
+      "default": "1"
     }
   }
 }
